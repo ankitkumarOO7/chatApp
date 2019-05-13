@@ -1,0 +1,38 @@
+/* :host{
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text{
+  text-align: center;
+  font-size: 1.54rem;
+  margin-top: 5rem;
+} */
+
+mat-card{
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+mat-card-header{
+  font-weight: 600;
+  font-size: .9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+mat-paginator{
+  margin-top: 1rem;
+}
+
+mat-card-content{
+  color: #535B65;
+}
+.info-text{
+  text-align: center;
+  font-size: 1.54rem;
+  margin-top: 5rem;
+}
+
+mat-card-actions{
+  float: right;
+}

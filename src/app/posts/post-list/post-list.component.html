@@ -1,0 +1,38 @@
+<!-- <mat-accordion *ngIf="posts.length>0">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      {{post.title}}
+    </mat-expansion-panel-header>
+    <p>{{post.content}}</p>
+    <mat-action-row>
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)='onDelete(post.id)'>DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-paginator [length]='totalPosts' [pageSize]='postsPerPage' [pageSizeOptions]='pageSizeOptions' (page)='onChangedPage($event)' *ngIf="posts.length>0"></mat-paginator>
+
+<p *ngIf="posts.length==0" class="mat-body-1 info-text">No Chat For You!</p>
+ -->
+
+
+<!-- <mat-accordion> -->
+  <mat-card class="example-card" *ngFor="let post of posts?.reverse()">
+    <mat-card-header>
+      @{{post.title}}
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{post.content}}</p>
+    </mat-card-content>
+    <mat-card-actions class="butt">
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)='onDelete(post.id)'>DELETE</button>
+    </mat-card-actions>
+  </mat-card>
+<!-- </mat-accordion> -->
+
+<mat-paginator [length]='totalPosts' [pageSize]='postsPerPage' [pageSizeOptions]='pageSizeOptions' (page)='onChangedPage($event)' *ngIf="posts.length>0"></mat-paginator>
+
+<p *ngIf="posts.length==0" class="mat-body-1 info-text">No Chat For You!</p>
+

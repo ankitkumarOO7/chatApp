@@ -1,0 +1,4 @@
+./mongo "mongodb+srv://cluster0-iarvu.mongodb.net/test" --username snocoder
+~/Documents/mongodb/bin
+
+ sudo npm run start:server

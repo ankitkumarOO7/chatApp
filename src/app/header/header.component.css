@@ -1,0 +1,21 @@
+ul{
+  list-style: none;
+  padding: 4px;
+  margin: 0;
+}
+ul li{
+  display: inline-block;
+}
+
+.space{
+  flex: 1 1 0;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.app-header{
+  background-color: #33485F;
+}

@@ -1,0 +1,17 @@
+mat-card-title{
+  display: block;
+  color: #4BA4F6;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+mat-card{
+  margin-top: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
