@@ -14,7 +14,7 @@ export class PostsService {
 
   getPosts(postsPerPage: number, currentPage: number) {
     const queryParams = `?pagesize=${postsPerPage}&page=${currentPage}`;
-    this.http.get<{message: string, posts: any, maxPosts: number}>('http://localhost:3000/api/posts' + queryParams)
+    this.http.get<{message: string, posts: any, maxPosts: number}>('https://sheltered-plateau-64226.herokuapp.com/api/posts' + queryParams)
     .pipe(map((postData) => {
       return { posts: postData.posts.map(post => {
         return{
@@ -40,21 +40,21 @@ export class PostsService {
 
   addPost(titlee: string, contente: string) {
     const post: Post = {id: null, title: titlee, content: contente};
-    this.http.post<{message: string, postId: string}>('http://localhost:3000/api/posts', post).pipe().subscribe((responseData) => {
+    this.http.post<{message: string, postId: string}>('https://sheltered-plateau-64226.herokuapp.com/api/posts', post).pipe().subscribe((responseData) => {
       this.router.navigate(['/']);
     });
   }
 
   updatePost(idd: string, titlee: string, contentt: string){
     const post: Post = { id: idd, title: titlee, content: contentt };
-    this.http.put('http://localhost:3000/api/posts/' + idd, post)
+    this.http.put('https://sheltered-plateau-64226.herokuapp.com/api/posts/' + idd, post)
     .subscribe(response => {
       this.router.navigate(['/']);
     });
   }
 
   deletePost(postId: string){
-    return this.http.delete('http://localhost:3000/api/posts/' + postId);
+    return this.http.delete('https://sheltered-plateau-64226.herokuapp.com/api/posts/' + postId);
   }
 
 }
